@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicted Price</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    
+    <div class="card">
+        <h1>The predicted rent price for selected house is ₹{{ price }} in {{location}}</h1>   
+    </div>
+    <div class="card-2">
+        <h2>Details of Your Needs </h2>
+        <ul type="None" >
+            <li><strong>BHK Type :</strong> {{ bedroom }}</li>
+            <li><strong>Area:</strong> {{ area }} sq.ft</li>
+            <li><strong>Bathrooms:</strong> {{ bathroom }}</li>
+            <li><strong>Property Type:</strong> {{ property_type }}</li>
+            <li><strong>Furnish Type:</strong> {{ furnish }}</li>
+        </ul>
+    </div>
+
+    <div class="home-link">
+        <a href="{{ url_for('index') }}">Go back to the home page</a>
+    </div>
+</body>
+</html>
